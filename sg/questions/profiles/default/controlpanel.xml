@@ -9,7 +9,7 @@
         category="Products"
         condition_expr=""
         url_expr="string:${portal_url}/@@sg_questions_settings"
-        icon_expr="string:${portal_url}/++resource++sg.questions/16px_question_icon.png"
+        icon_expr="string:${portal_url}/++resource++sg.questions/16px-Gtk-dialog-question.png"
         visible="True"
         i18n:attributes="title">
         <permission>Manage portal</permission>
