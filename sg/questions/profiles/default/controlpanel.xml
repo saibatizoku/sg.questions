@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="sg.questions"
+    purge="False">
+    <configlet title="SG Questions"
+        action_id="sg_questions"
+        appId="sg.questions"
+        category="Products"
+        condition_expr=""
+        url_expr="string:${portal_url}/@@sg_questions_settings"
+        icon_expr="string:${portal_url}/++resource++sg.questions/16px_question_icon.png"
+        visible="True"
+        i18n:attributes="title">
+        <permission>Manage portal</permission>
+    </configlet>
+</object>

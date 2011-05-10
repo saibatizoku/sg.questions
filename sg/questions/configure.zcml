@@ -2,6 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="sg.questions">
 
@@ -11,9 +12,16 @@
     <!-- Grok the package to initialise schema interfaces and content classes -->
     <grok:grok package="." />
 
+    <browser:page
+        name="sg_questions_settings"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".controlpanel.SGQuestionsSettingsControlPanel"
+        permission="cmf.ManagePortal"
+        />  
+
     <genericsetup:registerProfile
         name="default"
-        title="Install SoftwareGuru Questins Content-Type"
+        title="Install SoftwareGuru Questions Content-Type"
         directory="profiles/default"
         description="Installs the sg.questions package"
         provides="Products.GenericSetup.interfaces.EXTENSION"
