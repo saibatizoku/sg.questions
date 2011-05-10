@@ -1,19 +1,31 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:grok="http://namespaces.zope.org/grok"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="sg.questions">
 
-  <five:registerPackage package="." initialize=".initialize" />
+    <!-- Include configuration for dependencies listed in setup.py -->
+    <includeDependencies package="." />
 
-  <genericsetup:registerProfile
-      name="default"
-      title="sg.questions"
-      directory="profiles/default"
-      description="Installs the sg.questions package"
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-  <!-- -*- extra stuff goes here -*- -->
+    <!-- Grok the package to initialise schema interfaces and content classes -->
+    <grok:grok package="." />
+
+    <genericsetup:registerProfile
+        name="default"
+        title="Install SoftwareGuru Questins Content-Type"
+        directory="profiles/default"
+        description="Installs the sg.questions package"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <genericsetup:registerProfile
+        name="uninstall"
+        title="Remove sg.questions"
+        directory="profiles/uninstall"
+        description="Installs the sg.questions package"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+    <!-- -*- extra stuff goes here -*- -->
   
 </configure>

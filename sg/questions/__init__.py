@@ -1,4 +1,7 @@
-  # -*- extra stuff goes here -*- 
+from zope.i18nmessageid import MessageFactory
+
+_ = MessageFactory('sg.questions')
+# -*- extra stuff goes here -*- 
 
 def initialize(context):
-    """Initializer called when used as a Zope 2 product."""
+        """Initializer called when used as a Zope 2 product."""

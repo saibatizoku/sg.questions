@@ -26,6 +26,11 @@ setup(name='sg.questions',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'Plone',
+          'plone.app.discussion',
+          'plone.app.dexterity',
+          'collective.autopermission',
+          'collective.testcaselayer',
       ],
       entry_points="""
       # -*- Entry points: -*-
