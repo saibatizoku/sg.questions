@@ -1,0 +1,3 @@
+<object name="portal_types">
+    <object name="sg.questions.question" meta_type="Dexterity FTI" />
+</object>
