@@ -1,0 +1,43 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2011-05-24 19:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: sg.questions\n"
+
+#: ./profiles/default/types/sg.questions.question.xml
+msgid "A question"
+msgstr ""
+
+#: ./question.py:30
+msgid "Ask a question"
+msgstr ""
+
+#: ./controlpanel.py:31
+msgid "Here you can modify the settings for SG Questions."
+msgstr ""
+
+#: ./profiles/default/types/sg.questions.question.xml
+msgid "Question"
+msgstr ""
+
+#: ./profiles/default/controlpanel.xml
+msgid "SG Questions"
+msgstr ""
+
+#: ./controlpanel.py:30
+msgid "SoftwareGuru Questions Settings"
+msgstr ""
+
