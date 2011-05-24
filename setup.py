@@ -28,6 +28,7 @@ setup(name='sg.questions',
           # -*- Extra requirements: -*-
           'Plone',
           'plone.app.discussion',
+          'cioppino.twothumbs',
           'plone.app.dexterity',
           'collective.autopermission',
           'collective.testcaselayer',
