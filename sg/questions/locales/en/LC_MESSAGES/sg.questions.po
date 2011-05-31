@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-05-24 19:54+0000\n"
+"POT-Creation-Date: 2011-05-24 22:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid "A question"
 msgstr ""
 
-#: ./question.py:30
+#: ./question.py:34
 msgid "Ask a question"
 msgstr ""
 

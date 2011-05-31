@@ -31,5 +31,11 @@ class CommentsRatingViewlet(CommentsViewlet, grok.Viewlet):
 
 class IQuestion(form.Schema):
     """ A content-type for source code snippets. """
-    question = RichText(title=_(u"Ask a question"))
+    description = schema.Text(title=_(u"Ask a question"))
+
+class View(grok.View):
+    grok.context(IQuestion)
+    grok.require('zope2.View')
+    grok.layer(ISGQuestionsLayer)
+
 

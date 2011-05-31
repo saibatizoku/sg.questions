@@ -27,7 +27,13 @@ setup(name='sg.questions',
           'setuptools',
           # -*- Extra requirements: -*-
           'Plone',
+          # -+- for comments and discussions -+-
+          'collective.autoresizetextarea',
+          'plone.formwidget.captcha',
+          'plone.formwidget.recaptcha',
+          'collective.z3cform.norobots',
           'plone.app.discussion',
+          # -+- Like/Don't like -+-
           'cioppino.twothumbs',
           'plone.app.dexterity',
           'collective.autopermission',
