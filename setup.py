@@ -36,6 +36,7 @@ setup(name='sg.questions',
           # -+- Like/Don't like -+-
           'cioppino.twothumbs',
           'plone.app.dexterity',
+          'plone.app.referenceablebehavior',
           'collective.autopermission',
           'collective.testcaselayer',
       ],
