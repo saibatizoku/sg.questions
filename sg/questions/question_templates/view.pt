@@ -16,13 +16,10 @@
 
             <h1 class="documentFirstHeading" tal:content="context/title" />
             
-
             <div tal:replace="structure provider:plone.belowcontenttitle" />
 
-            <p class="documentDescription" tal:content="context/description" />
-
-            <div tal:content="structure here/@@rate-if-you-dare"/>
-
+            <div tal:replace="structure view/w/question/render" />
+            <!--div tal:content="structure here/@@rate-if-you-dare"/-->
             <div tal:replace="structure provider:plone.abovecontentbody" />
 
             <div tal:replace="structure provider:plone.belowcontentbody" />

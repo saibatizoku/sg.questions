@@ -40,7 +40,7 @@
                                  id string:${reply/getId}"
                  tal:condition="python:canReview or review_state == 'published'">
 
-                <div tal:content="structure comment/@@rate-if-you-dare"/>
+                <!--div tal:content="structure comment/@@rate-if-you-dare"/-->
 
                 <div class="commentImage" tal:condition="showCommenterImage">
                     <a href="" tal:condition="has_author_link"

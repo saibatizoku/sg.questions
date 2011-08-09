@@ -8,34 +8,39 @@ from plone.app.layout.viewlets.interfaces import IBelowContent
 from plone.app.discussion.interfaces import IDiscussionLayer
 from plone.app.discussion.browser.comments import CommentsViewlet
 
+from zope.interface import alsoProvides
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 from plone.directives import form, dexterity
 from plone.app.textfield import RichText
-
+from cioppino.twothumbs.interfaces import ILoveThumbsDontYou
 from sg.questions import _
 
 
 class ISGQuestionsLayer(IDefaultBrowserLayer):
     """ Browser layer for sg.questions """
 
-class CommentsRatingViewlet(CommentsViewlet, grok.Viewlet):
-    """ This viewlet is added to rate the comment """
-    grok.context(IContentish)
-    grok.viewletmanager(IBelowContent)
-    grok.layer(ISGQuestionsLayer)
-    grok.view(IViewView)
-    grok.name('plone.comments')
-
-    index = ViewPageTemplateFile('question_templates/rating_viewlet.pt')
 
 class IQuestion(form.Schema):
     """ A content-type for source code snippets. """
-    description = schema.Text(title=_(u"Ask a question"))
+    title = schema.TextLine(title=_(u"Your question"), required=True)
+    question = RichText(title=_(u"A description for the question"), required=False)
 
-class View(grok.View):
+alsoProvides(IQuestion, ILoveThumbsDontYou)
+
+class View(dexterity.DisplayForm):
     grok.context(IQuestion)
     grok.require('zope2.View')
     grok.layer(ISGQuestionsLayer)
 
 
+class CommentsRatingViewlet(CommentsViewlet, grok.Viewlet):
+    """ This viewlet is added to rate the comment """
+    grok.context(IQuestion)
+    grok.viewletmanager(IBelowContent)
+    grok.layer(ISGQuestionsLayer)
+    grok.name('plone.comments')
+
+    index = ViewPageTemplateFile('question_templates/rating_viewlet.pt')
+
+    
