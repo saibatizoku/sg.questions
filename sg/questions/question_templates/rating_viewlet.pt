@@ -40,7 +40,7 @@
                                  id string:${reply/getId}"
                  tal:condition="python:canReview or review_state == 'published'">
 
-                <!--div tal:content="structure comment/@@rate-if-you-dare"/-->
+                <div tal:content="structure reply/@@rate-if-you-dare"/>
 
                 <div class="commentImage" tal:condition="showCommenterImage">
                     <a href="" tal:condition="has_author_link"
@@ -120,11 +120,11 @@
 
 
                 </div>
-                <button class="context reply-to-comment-button hide allowMultiSubmit"
+                <!--button class="context reply-to-comment-button hide allowMultiSubmit"
                         tal:condition="python:isDiscussionAllowed and (isAnon and isAnonymousDiscussionAllowed or userHasReplyPermission)"
                         i18n:translate="label_reply">
                     Reply
-                </button>
+                </button-->
             </div>
 
         </tal:getreplies>
