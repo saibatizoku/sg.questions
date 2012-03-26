@@ -24,28 +24,28 @@ setup(name='sg.questions',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'setuptools',
-          # -*- Extra requirements: -*-
-          'Plone',
-          # -+- for comments and discussions -+-
-          'collective.autoresizetextarea',
-          'plone.formwidget.captcha',
-          'plone.formwidget.recaptcha',
-          'collective.z3cform.norobots',
-          'plone.app.discussion',
-          # -+- Like/Don't like -+-
-          'cioppino.twothumbs',
-          'plone.app.dexterity',
-          'plone.app.referenceablebehavior',
-          'collective.autopermission',
-          'collective.testcaselayer',
-      ],
+        'setuptools',
+        # -*- Extra requirements: -*-
+        'Plone',
+        # -+- for comments and discussions -+-
+        'collective.autoresizetextarea',
+        'plone.formwidget.captcha',
+        'plone.formwidget.recaptcha',
+        'collective.z3cform.norobots',
+        'plone.app.discussion',
+        # -+- Like/Don't like -+-
+        'cioppino.twothumbs',
+        'plone.app.dexterity',
+        'plone.app.referenceablebehavior',
+        'collective.autopermission',
+        ],
+      extras_require={
+        'test': ['plone.app.testing'],
+        },
       entry_points="""
       # -*- Entry points: -*-
 
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
       )
