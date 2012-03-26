@@ -48,14 +48,12 @@
                          <img src="defaultUser.gif"
                               alt=""
                               border="0"
-                              height="32"
                               tal:attributes="src portrait_url;
                                               alt reply/Creator" />
                     </a>
                     <img src="defaultUser.gif"
                          alt=""
                          border="0"
-                         height="32"
                          tal:condition="not: has_author_link"
                          tal:attributes="src portrait_url;
                                          alt reply/Creator" />
